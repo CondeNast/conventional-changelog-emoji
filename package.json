@@ -1,0 +1,35 @@
+{
+  "name": "@atjson/conventional-changelog-emoji",
+  "version": "0.19.0",
+  "description": "Conventional commits with emoji",
+  "main": "src/index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "./node_modules/jest/bin/jest.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "q": "1.5.1"
+  },
+  "devDependencies": {
+    "conventional-changelog-core": "4.0.2",
+    "husky": "3.0.9",
+    "jest": "24.9.0",
+    "lint-staged": "9.4.2",
+    "prettier": "1.18.2",
+    "shelljs": "0.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

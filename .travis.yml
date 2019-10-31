@@ -1,0 +1,10 @@
+---
+language: node_js
+node_js:
+  - "8"
+
+install:
+  - npm ci
+
+script:
+  - npm test -- --no-cache --coverage --maxWorkers=4
